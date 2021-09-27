@@ -1,5 +1,5 @@
-# We discussed the lists of names and how we had to change each element. We also discussed which methods were more concise and picked that to use. We combined the most concise way to print a name with the method of using a function. We also discussed adding input on which class the user can choose and how to check for empty inputs.
-# We each discovered other ways to pick and print a name at random. There was randrange, random.choice, and even random.randint.
+# We discussed the lists of names and how we had to change each element. We also discussed which methods were more concise and picked that to use. We combined the most concise way to print a name with the method of using a function. We also discussed adding input so that the user can choose a class and how to check for empty inputs.
+# We each discovered other ways to pick and print a name at random. There was randrange, random.choice, and even random.randint. We also discovered a way to check for empty inputs so that if the user doesn't pick a class, the program can print a name from either class at random.
 # There were no questions.
 # It was insightful to collaborate with other people and gain new ideas for this python program.
 
