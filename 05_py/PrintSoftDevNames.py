@@ -1,5 +1,5 @@
 # SUMMARY OF TRIO DISCUSSION
-# We discussed the lists of names and how we had to change each element. We also discussed which methods were more concise and picked that to use. We combined using random.choice with the method of using a function. We also discussed adding input so that the user can choose a class if they want. We also talked about how to access different dictionary values. 
+# We discussed the lists of names and how we had to change each element. We also discussed which methods were more concise and picked that to use. We combined using random.choice with the method of using a function. We also discussed adding input so that the user can choose a class if they want. We also talked about how to access different dictionary values.
 # DISCOVERIES
 # We each discovered other ways to pick and print a name at random. There was randrange, random.choice, and even random.randint. We also discovered a way to use dictionaries instead of lists, which wasn't too different from using lists.
 # QUESTIONS
@@ -9,7 +9,7 @@
 
 import random
 
-# Dictionaries for people in periods 1 and 2
+# Dictionary for people in periods 1 and 2
 KREWES = {
     'orpheus': ['Alejandro Alonso', 'Aryaman Goenka', 'Christopher Liu', 'Deven Maheshwari', 'Emma Buller', 'Ella Krechmer', 'Gavin McGinley',
            'Haotian Gan', 'Ivan Lam', 'Ishraq Mahid', 'Ivan Mijacika', 'Julia Nelson', 'Lucas Lee', 'Lucas Tom wong',
