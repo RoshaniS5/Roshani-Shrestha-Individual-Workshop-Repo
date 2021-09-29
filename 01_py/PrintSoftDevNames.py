@@ -1,6 +1,8 @@
 # Roshani Shrestha
 # SoftDev
-# K05 - Original code for printing names
+# K05 - Original code for printing a random name from one of the Software Development classes
+# 2021-09-28
+
 from random import randrange
 
 # List people for periods 1 and 2
