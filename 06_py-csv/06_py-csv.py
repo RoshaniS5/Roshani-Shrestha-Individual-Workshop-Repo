@@ -1,6 +1,6 @@
 # The Red Imposter  || Daniel Sooknanan, Roshani Shrestha, Shadman Rakib
 # SoftDev
-# 06_py-csv.py: Returns a random Job Class based on their respective
+# K06: 06_py-csv.py: Returns a random Job Class based on their respective
 # frequenies given a .csv file of Job Classes & Percentages
 # 2021-09-16
 
