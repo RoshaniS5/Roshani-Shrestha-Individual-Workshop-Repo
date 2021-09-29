@@ -1,6 +1,7 @@
 # Roshani Shrestha
 # SoftDev
-# K05 - Amalgamated code for printing names
+# K05 - Amalgamated code for printing a name from one of the Software Development classes
+# 2021-09-28
 # SUMMARY OF TRIO DISCUSSION
 # We discussed the lists of names and how we had to change each element. We also discussed which methods were more concise and picked that to use. We combined using random.choice with the method of using a function. We also discussed adding input so that the user can choose a class if they want. We also talked about how to access different dictionary values.
 # DISCOVERIES
