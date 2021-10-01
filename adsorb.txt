@@ -4,5 +4,5 @@ K08: Cross Pollination and Virtual Insanity - Details the questions, comments, a
 2021-09-30
 
 Questions: 
-Comments:
+Comments: Some use random.randint(), while others use random.choices().
 Concerns:
