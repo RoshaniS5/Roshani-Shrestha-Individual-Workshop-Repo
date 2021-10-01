@@ -16,7 +16,7 @@ Virtual environments each have their own Python binaries. After watching a video
 They also allow you to use different versions of a library. To activate the virtual environment, use `source myherozero/bin/activate` in the terminal. A pip list lists all the libraries currently installed in the virtual environment. 
 
 You can pip install different libraries, which will also install the dependencies. 
-You can use `pip freeze > requirement.txt` to save the different libraries installed in a txt file. Entering `deactivate` deactivates the virtual environment. 
-To delete the environment you can just delete the directory. 
-Entering `pip install -r requirements.txt` would install the same libraries mentioned in requirements.txt. 
-Entering `python3 -m venv NAME --system-site-packages` would get access to the global python packages for the virtual environment and entering `pip list --local` would only list packages installed in the venv (doesn’t include the global ones installed from above).  
+- You can use `pip freeze > requirement.txt` to save the different libraries installed in a txt file. Entering `deactivate` deactivates the virtual environment. 
+- To delete the environment you can just delete the directory. 
+- Entering `pip install -r requirements.txt` would install the same libraries mentioned in requirements.txt. 
+- Entering `python3 -m venv NAME --system-site-packages` would get access to the global python packages for the virtual environment and entering `pip list --local` would only list packages installed in the venv (doesn’t include the global ones installed from above).  
