@@ -4,7 +4,7 @@ K08: Workshop Repo Hopping - Q/C/C
 2021-09-30
 
 Questions:
-Out of everyone’s approach to weightedly generate a random occupation, which is the fastest and most efficient?
+- Out of everyone’s approach to weightedly generate a random occupation, which is the fastest and most efficient?
 
 Comments:
 It is interesting to see how many different ways were used to obtain a random weighted occupation in K06. For example, Alif’s trio used 
@@ -19,4 +19,4 @@ track of the position of commas relative to quotes, and separated job titles fro
 are two very different ways to create the same dictionary.
 
 Concerns:
-Some of these methods may not be as efficient as other methods. 
+- Some of these methods may not be as efficient as other methods. 
