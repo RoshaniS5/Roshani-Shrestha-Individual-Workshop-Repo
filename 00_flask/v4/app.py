@@ -16,4 +16,4 @@ if __name__ == "__main__":  # true if this file NOT imported
     app.run()
 
 # Predictions: It should be the same as the previous file, as long as the file is not imported and not in flask run.
-# Results:   
+# Results: It is the same as predicted.  
