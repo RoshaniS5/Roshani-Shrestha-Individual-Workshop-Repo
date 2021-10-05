@@ -11,5 +11,8 @@ def hello_world():
 
 app.run()
 
-# Predictions: It should be the same as app.py from K09, except `__main__` doesn't print in terminal
-# After: 
+# Predictions: 
+# It should produce the same results as v0 app.py, except it doesn't print anything into the terminal.
+
+# Results: 
+# It worked as expected. 

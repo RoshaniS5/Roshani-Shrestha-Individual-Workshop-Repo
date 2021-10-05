@@ -12,5 +12,9 @@ def hello_world():
 
 app.run()  # Q4: Where have you seen similar construcs in other languages?
 
-# `__main__` will print in the terminal after opening the link. "No hablo queso!" will print on the site.
+# Predictions: 
+# It should produce the same results as K09. It should print the "__name__" in the terminal after opening the link, which is "__main__". "No hablo queso!" will print on the browser.
+
+# Results: 
+# It worked as expected and as it did previously.
 

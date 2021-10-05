@@ -13,5 +13,10 @@ def hello_world():
 
 app.run()
 
-# Predictions: first prints the string "about to print __name__..." and then prints `__main__`. Then, "No hablo queso!" prints onto the webpage after opening the link.
+# Predictions: 
+# It should be the same as previous app.py files, but with a couple print statements that print when 
+# the localhost site (127.0.0.1:5000/ is accessed). It first prints the string "about to print __name__..." and then prints "__main__"
+# when app is run via python.exe or "app" when run via "flask run."
+
+# Results: 
 # It worked as predicted.

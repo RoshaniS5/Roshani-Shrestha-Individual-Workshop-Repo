@@ -14,6 +14,12 @@ def hello_world():
 app.debug = True
 app.run()
 
-# Predictions: It should be the same as the prior file. 
-# Results: A debugger is present. There is a debugger PIN. When the file is changed, the debugger detects the change and prints it into the terminal. Then it reloads. The message that is displayed is "Detected change in '/Users/roshanishrestha/Roshani-Shrestha-Individual-Workshop-Repo/00_flask/v3/app.py', reloading". 
-# Then, you can refresh the page to see the changes on the page.
+# Predictions: 
+# It should be the same as the prior file (v2 app.py). 
+
+# Results: 
+# It is like v2 app.py in the sense that the two print statements act the same, 
+# but there are differences. First of all, a Debugger is active and there is a Debugger PIN. 
+# Second of all, when the file is changed, the change is detected and the localhost site 
+# is updated (but you have to refresh to see this change). 
+# Something of note is that when using flask run, debug mode isn't active despite setting the value to True.

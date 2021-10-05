@@ -9,34 +9,44 @@ from random import choices
 
 app = Flask(__name__) #create instance of class Flask
 
-@app.route("/")       #assign fxn to route
-def hello_world():
-    result = '<h1>The Red Imposter - Daniel Sooknanan, Shadman Rakib, and Roshani Shrestha</h1><br/><br/><b>List of Occupations:</b><br/>'
-    occ_dict = {} # Create a dictionary to be filled in
-    filename = 'occupations.csv' # Specifies the target .csv file
+def makeDict(filename):
+    dict = {} 
 
     try:
         with open(filename) as csvfile:
             reader = DictReader(csvfile)
             for row in reader: 
-                # Fill in the dictionary with Job Classes as keys & Percentages as values
-                occ_dict[row['Job Class']] = float(row['Percentage']) 
+                dict[row['Job Class']] = float(row['Percentage']) 
 
-            if 'Total' in occ_dict.keys(): 
-                occ_dict.pop('Total') # Remove the Total at the end of the .csv file if it exists
-            
-            for k in occ_dict.keys():
-                result += k + '<br/>'
-            result += '<br/>'
-            
-            # Get the first item in a list that is length k (in this case 1)
-            # The randomness of a key appearing is weighted based on its respective value
-            occ = choices(list(occ_dict.keys()), weights=occ_dict.values(), k=1)[0]
-            result += '<b>Selected Occupation:</b> ' + occ 
-            return result
+            if 'Total' in dict.keys(): 
+                dict.pop('Total') 
     
     except FileNotFoundError: 
-        return 'File "%s" does not exist' % (filename)
+        print('File "%s" does not exist' % (filename))
+
+    return dict
+
+def getRandomKey(dictionary):
+    if (len(dictionary) > 0):
+        result = choices(list((dictionary).keys()), weights=dictionary.values(), k=1)[0]
+        return '<h3>Selected: %s</h3>' % result
+    else:
+        return '<h3>Selected: None (no occupations to select from)</h3>'
+
+def listKeys(dictionary):
+    key_list = '<div>Occupations: '
+    for key in dictionary.keys():
+        key_list += '<div>%s</div>' % (key)
+    return key_list + '</div>'
+
+@app.route("/")       #assign fxn to route
+
+def main():
+    filename = 'occupations.csv' 
+    occ_dict = makeDict(filename)
+    header = '<h3>The Red Imposter | Daniel Sooknanan, Roshani Shrestha, Shadman Rakib</h3>'
+    return header + getRandomKey(occ_dict) + listKeys(occ_dict)
+
 
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change
