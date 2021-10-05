@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
+# The Red Imposter - Daniel Sooknanan, Shadman Rakib, and Roshani Shrestha
 # SoftDev
-# Oct 2021
+# K10: Putting Little Pieces Together - Details our predictions and results in the form of comments for this file
+# 2021-10-05
 
 from flask import Flask
 app = Flask(__name__) # Q0: Where have you seen similar syntax in other langs?
