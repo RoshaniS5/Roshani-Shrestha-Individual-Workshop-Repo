@@ -9,6 +9,7 @@ from random import choices
 
 app = Flask(__name__) #create instance of class Flask
 
+# Create a dictionary given the filename
 def makeDict(filename):
     dict = {} 
 
@@ -26,6 +27,7 @@ def makeDict(filename):
 
     return dict
 
+# Return a random key given the frequency at which it should appear (second column of csv)
 def getRandomKey(dictionary):
     if (len(dictionary) > 0):
         result = choices(list((dictionary).keys()), weights=dictionary.values(), k=1)[0]
@@ -33,6 +35,7 @@ def getRandomKey(dictionary):
     else:
         return '<h3>Selected: None (no occupations to select from)</h3>'
 
+# Return a string of all the keys in the given dictionary
 def listKeys(dictionary):
     key_list = '<div>Occupations: '
     for key in dictionary.keys():
@@ -49,5 +52,4 @@ def main():
 
 
 if __name__ == "__main__":  # true if this file NOT imported
-    app.debug = True        # enable auto-reload upon code change
     app.run()
