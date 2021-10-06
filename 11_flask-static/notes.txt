@@ -1,7 +1,7 @@
-# The Red Imposter | Daniel Sooknanan, Shadman Rakib, and Roshani Shrestha
-# SoftDev
-# K11: Some Things Never Change - Details predictions and results of the files in 11_flask-static
-# 2021-10-07
+The Red Imposter | Daniel Sooknanan, Shadman Rakib, and Roshani Shrestha
+SoftDev
+K11: Some Things Never Change - Details predictions and results of the files in 11_flask-static
+2021-10-07
 
 Predictions:
 For foo.html, http://localhost:5000/static/foo.html doesn't work unless flask is being run. For foo, http://localhost:5000/static/foo will also not work. 

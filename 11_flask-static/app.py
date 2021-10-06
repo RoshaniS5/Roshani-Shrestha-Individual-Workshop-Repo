@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
+# The Red Imposter | Daniel Sooknanan, Shadman Rakib, and Roshani Shrestha
 # SoftDev
-# Oct 2021 
+# K11: Some Things Never Change - Uses flask to serve fixie.html staticly
+# 2021-10-07
 
 # DEMO 
 # basics of /static folder
