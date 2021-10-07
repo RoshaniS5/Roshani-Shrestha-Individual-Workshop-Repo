@@ -4,10 +4,13 @@ K11: Some Things Never Change - Details predictions and results of the files in 
 2021-10-07
 
 Predictions:
-For foo.html, http://localhost:5000/static/foo.html doesn't work unless flask is being run. For foo, http://localhost:5000/static/foo will also not work. 
-The app.py file will produce very similar results to previous app.py files analyzed. After opening the link, it will print "the __name__ of this module is... " 
+For foo and foo.html, accessing files via localhost:5000/ doesn't work unless flask is being run / a server is being hosted. The app.py file will 
+produce very similar results to previous app.py files analyzed. After opening the link, it will print "the __name__ of this module is... " 
 in the terminal followed by __name__ which is "__main__". On the browser, "No hablo queso!" is printed. Debug mode is on, so refreshing the page 
 will display changes quickly. 
 
 Results: 
 It worked as predicted. The browser could not connect to the links in foo.html and foo.
+In addition:
+1. Accessing foo (plaintext file) via the localhost link downloads the file
+2. Accessing foo.html (a webpage) via the localhost link renders the webpage instead
