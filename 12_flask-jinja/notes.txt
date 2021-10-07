@@ -1,0 +1,30 @@
+The Red Imposter | Daniel Sooknanan (Sussy), Roshani Shrestha (Pete), Shadman Rakib (Ducky)
+SoftDev
+K12: ...or The Only Constant is Change? - Notes on app.py in 12_flask-jinja
+2021-10-08
+
+Q0: What happens if you remove render_template from this line? 
+Predictions:
+If you remove render_template from this line, the return statement on line 16 will not run. There will be an error because render_template won't be 
+imported and thus will not be defined. Therefore, model_tmplt.html will be unable to be served from localhost.
+
+Results:
+It worked as predicted.
+
+Q1: Can all of your teammates confidently predict the URL to use to load this page?
+Predictions:
+Yes, the URL is http://127.0.0.1:5000/my_foist_template. 
+
+Results:
+The URL is correct.
+
+Q2: What is the significance of each argument?
+Predictions:
+The first argument is the file name that is served from localhost as a template. The second and third arguments are variables in the template.
+The second argument is the value that replaces foo in model_tmplt.html. In this case, it is "fooooo". This becomes the title. The third argument 
+is the value that replaces collection in model_tmplt.html. In this case, it is coll, which is a list of numbers ([0,1,1,2,3,5,8]). This appears in
+the body of the page. 
+
+Results:
+It worked as predicted. Basically, the second and third arguments define variables that jinja can use to insert text into the template. These variables 
+can be of any type (ex: strings, ints, lists, dictionaries, etc.).
