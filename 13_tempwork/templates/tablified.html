@@ -6,6 +6,11 @@
   </head>
 
   <body>
+      <h1> {{ team }} </h1>
+      {{ header }}
+      <br> <br>
+      Random Occupation: {{ occupation }}
+      <br> <br>
      <table>
         <tr><th> Job </th> <th> Percentage </th></tr>
         {% for key, value in occupations.items() %}
