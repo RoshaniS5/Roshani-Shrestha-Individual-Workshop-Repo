@@ -1,5 +1,5 @@
 Selective Soup | Justin Zou (Piggy), Wen Hao Dong (Jal Hordan), Roshani Shrestha (Pete)
-SoftDev 
+SoftDev
 K14: Form and Function - Notes for app.py
 2021-10-15
 
@@ -10,7 +10,7 @@ We don't know what exactly will print when we print the app object, but it likel
 
 The request object contains information about the form request from when the user clicks the submit button in a form. It contains the request method used.
 
-We think (and after running the app, we see) that request.args is a dictionary that contains all of the input values of the form submitted by the user. 
+We think (and after running the app, we see) that request.args is a dictionary that contains all of the input values of the form submitted by the user.
 
 In the `disp_loginpage` function, request.args will likely be empty, since the user hasn't submitted anything yet, so printing request.args['username'] will likely result in an error. It results in a KeyError.
 
