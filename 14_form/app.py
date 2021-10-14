@@ -1,4 +1,4 @@
-# Selective Soup | Justin Zou, Wen Hao Dong, Roshani Shrestha (Pete)
+# Selective Soup | Justin Zou (Piggy), Wen Hao Dong (Jal Hordan), Roshani Shrestha (Pete)
 # SoftDev 
 # K14: Form and Function - Notes for app.py
 # 2021-10-15 
@@ -29,7 +29,7 @@ def disp_loginpage(): # function to display the initial login page
     print("***DIAG: this Flask obj ***") 
     print(app) # prints "<Flask 'app'>"
     print("***DIAG: request obj ***") 
-    print(request) # prints "<Request 'http://127.0.0.1:5000/' [GET]>" which is the information about the form request
+    print(request) # prints "<Request 'http://127.0.0.1:5000/' [GET]>" which is the information about the form request (request method used)
     print("***DIAG: request.args ***") 
     print(request.args) # prints a dictionary with the inputs of the user, which is empty right now - "ImmutableMultiDict([])"
     # print("***DIAG: request.args['username']  ***") 
