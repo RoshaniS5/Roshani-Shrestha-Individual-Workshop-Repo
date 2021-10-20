@@ -12,17 +12,22 @@
   </head>
 
   <body>
+        <h1> {{ logged }} </h1>
     <h1>
+      Welcome, Travelers of the Intertoobz!
+      <br>
       Selective Soup | Justin Zou (Piggy), Wen Hao Dong (Jal Hordan), Roshani Shrestha (Pete)
     </h1>
 
 
     <h3>
-      Enter your username and Password below to proceed.
+      Enter your username and password below to proceed.
     </h3>
-    <form action="/auth">
-      <input type="text" name="username">
-      <input type="text" name="Password">
+    <form method="post">
+      Username: <input type="text" name="username"> 
+      <br>
+      Password: <input type="password" name="password">
+      <br>
       <input type="submit" name="sub1">
     </form>
     <br>
