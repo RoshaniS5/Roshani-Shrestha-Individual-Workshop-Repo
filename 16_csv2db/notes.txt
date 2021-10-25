@@ -1,7 +1,7 @@
-# Selective Soup | Justin Zou (Piggy), Wen Hao Dong (Jal Hordan), Roshani Shrestha (Pete)
-# SoftDev 
-# K16: All About Database - SQLITE3 BASICS, notes
-# 2021-10-25
+Selective Soup | Justin Zou (Piggy), Wen Hao Dong (Jal Hordan), Roshani Shrestha (Pete)
+SoftDev 
+K16: All About Database - SQLITE3 BASICS, notes
+2021-10-25
 
 Relational database
  
