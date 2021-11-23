@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- 
+  <!--
     Crashing Waves: Jonathan Wu (Loki), Roshani Shrestha (Pete)
     SoftDev pd0
     K18 -- CSS basics
     2021-11-23t
     time spent: 1.5 hours
 
-	 WORK FILE for CSS 	
+    Bacon ipsum generator: https://baconipsum.com/?paras=2&type=all-meat&start-with-lorem=1
+	  WORK FILE for CSS
     -->
 
   <style>
@@ -17,42 +18,48 @@
     }
 
     h1 {
-      background-color: rgb(173, 173, 173);
+      background-color: #adadad;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: white;
-      text-align: center;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      margin-top: 0px;
+      margin-bottom: 0px;
     }
 
     ul {
-      list-style-type: none; 
-      display: relative; 
-      padding-left: 0px;
+      padding: 0;
+      list-style-type: none;
     }
 
     a {
       text-decoration: none;
-      color: white;
+      color: #e0e0e0;
     }
 
-    .overallbody {
-      background-color: #636262;
+    .bodycontainer {
+      background-color: #807e7e;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
     }
 
-    .navfoo {
-      display: inline-block;
-      padding-right: 50px;
-      text-align: justify;
+    .left {
+      margin-left: 10px;
+      width: 20%;
     }
 
-    .mainfoo {
-      display: inline-block;
-      padding-right: 10px;
-      text-align: justify;
+    .right {
+      margin-top: -6px;
+      width: 80%;
     }
 
     .bottom {
+      background-color: #4f4f4f;
       text-align: right;
-      background-color: #555555;
-      color: #706f6f; 
+      color: #6b6b6b;
       padding: 10px;
     }
   </style>
@@ -63,28 +70,40 @@
   </head>
 
   <body>
-    <div class="overallbody">
     <h1>foo heading 1</h1>
-    <div class="navfoo">
-    <h3>nav foo</h3>
-    <ul>
-      <li><a href="">dis</a></li>
-      <li><a href="">dat</a></li>
-      <li><a href="">de udda ting</a></li>
-    </ul>
-  </div>
-    <div class="mainfoo">
-    <h2>main foo heading</h2>
-    <p>tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk 
+    <div class="bodycontainer">
+      <div class="left">
+        <h3>nav foo</h3>
+        <ul>
+          <li><a href="">dis</a></li>
+          <li><a href="">dat</a></li>
+          <li><a href="">de udda ting</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <h2>main foo heading</h2>
+        <p>
+        Bacon ipsum dolor amet burgdoggen buffalo landjaeger, biltong alcatra
+        pastrami ground round turducken pork rump. Landjaeger turkey chislic
+        capicola beef ribs, rump picanha. Shank swine sirloin biltong ground
+        round buffalo beef. Jowl tenderloin pork capicola sausage. Ball tip
+        pancetta frankfurter, ham shankle capicola filet mignon chuck boudin
+        bacon shank short loin tongue drumstick.
+        <br>
+        <br>
+        Shankle jowl pig, kevin spare ribs meatloaf ribeye buffalo turducken.
+        Leberkas alcatra swine, pork loin ham hock bresaola flank ribeye. Strip
+        steak porchetta frankfurter brisket picanha, spare ribs shoulder
+        capicola venison. Tongue landjaeger bresaola leberkas sausage, tail
+        frankfurter. Hamburger filet mignon pork belly pork. Picanha pig sirloin
+        cupim, jowl andouille filet mignon tongue salami porchetta beef meatball
+        jerky alcatra. Tail meatloaf alcatra capicola rump, shoulder ribeye
+        landjaeger.
+      </div>
     </div>
-
-      <br>
-      <br>
-  </div>
-      <div class="bottom">
+    <div class="bottom">
       Copyright &copy; 2021 Clyde "Thluffy" Sinclair
     </div>
-
   </body>
 
 </html>
