@@ -24,8 +24,12 @@ def api():
     print(data.geturl())
     print("***DIAG: data.read() ***") 
     print(data.read())
+    print("***DIAG: data.info() ***") 
+    print(data.info())
 
-    d = data.read().loads() 
+    # jsonstr = "" + data.read()
+
+    d = json.loads(data.read()) 
     return render_template("main.html", pic=d['url'])
 
 if __name__ == "__main__":  # true if this file NOT imported
