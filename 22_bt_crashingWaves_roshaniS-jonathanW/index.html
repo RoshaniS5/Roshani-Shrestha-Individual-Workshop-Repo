@@ -22,82 +22,88 @@ time spent: 1 hour
     <h1>Crashing Waves: Jonathan Wu (Loki), Roshani Shrestha (Pete)</h1>
     <h2> 1. Navbar </h2>
     <p>
-      <a href="https://getbootstrap.com/docs/5.1/components/navbar/">Documentation</a> about the navbar.
+      This feature of prebuilt navbars in Bootstrap is a very handy feature for every website that needs a navigation bar.
+      <br><br>
       The overall navbar is spanned by a navbar class. The background color (navy) is set by adding it in 
       the style attribute in the nav tag. The color scheme of dark is set by adding "navbar-dark" in the class 
-      attribute of the nav tag. If you make the window smaller, "collapse navbar-collapse" would collapse
-      the navbar into a hamburger style. In this case, we commented that out because it would most likely require 
-      JavaScript to work properly. Using "container-fluid" allows the navbar to span the entire width. Using 
-      "navbar-nav me-auto mb-2 mb-lg-0" styles the navbar so that all the items are in a row. This is used in 
+      attribute of the nav tag. Using "container-fluid" allows the navbar to span the entire width. Using 
+      "navbar-nav" styles the navbar so that all the items are in a row. This is used in 
       the class attribute of the ul tag. This is also used to align all the items to the left and resizes the navbar
       properly. "nav-item" is used for adding items to the navbar. "nav-link" is used to add links to the navbar in the same 
       style as the rest of the navbar. "active" and "disabled" can be used to specify the properties of these links. 
-      "d-flex" in the form tag organizes the elements within it (in this case, the search bar and button).
-
-      This feature of prebuilt navbars in Bootstrap is a very handy feature for every website that needs a navigation bar.
+      <br><br>
+      If you make the window smaller (and it is encouraged to do so!), the links collapse on top of each other. 
     </p>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: navy;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        <!-- </div> -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Working link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled link</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <br>
     <h2> 2. Grids </h2>
-    <p> This feature is best used for organizing elements of a page in a specific format.</p>
+    <p> 
+      This feature is best used for organizing elements of a page in a specific format. In this 
+      case, the chunks of text are aligned next to each other
+      <br><br>
+      This is a very simple example, but look at how the columns are all next to each other. This is done through the 
+      adding "container" to the class attribute in the div tag. 
+      <br><br>
+      If you resize the window (please do!) you can see that the columns stay next to each other and 
+      don't collapse on top of one another.
+    </p>
     <div class="container">
         <div class="row">
           <div class="col">
-            Column
+            This is a column. 
           </div>
           <div class="col">
-            Column
+            Adding "row" to the class attribute of the div tag allows the columns to 
+            all appear next to each other.
           </div>
           <div class="col">
-            Column
+            The style of the columns are governed by adding "col" to the class attribute of
+            the div tag.
           </div>
         </div>
       </div>
       <br>
       <h2> 3. Cards </h2>
-      <p> This next feature is best used for displaying information concisely as well as put a link 
-          to redirect the user elsewhere if needed. 
+      <p> 
+        This next feature is best used for displaying information concisely as well as putting a link 
+        to redirect the user elsewhere if needed.  
+        <br><br>
+        Again, rows and columns are used to organize these cards. However, we will focus on the cards 
+        themselves. 
+        <br><br>
+        Cards basically appear how you would expect them to. They have light borders and contain elements 
+        within them. Adding "card" in the class attribute of the div tag creates a card. "card-body" 
+        organizes the elements in the card. "card-title" styles the card's title. "card-text" styles the 
+        card's text below the title. 
       </p>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">Title is in bold!</h5>
+              <p class="card-text">Supporting text is below the title. The button below can take you to a link!</p>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">This card is next to the other one.</h5>
+              <p class="card-text">This is because of the "row" class.</p>
             </div>
           </div>
         </div>
