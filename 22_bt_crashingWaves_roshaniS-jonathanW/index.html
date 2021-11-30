@@ -20,13 +20,29 @@ time spent: 1 hour
   </head>
   <body>
     <h1>Crashing Waves: Jonathan Wu (Loki), Roshani Shrestha (Pete)</h1>
+    <h2> 1. Navbar </h2>
+    <p>
+      <a href="https://getbootstrap.com/docs/5.1/components/navbar/">Documentation</a> about the navbar.
+      The overall navbar is spanned by a navbar class. The background color (navy) is set by adding it in 
+      the style attribute in the nav tag. The color scheme of dark is set by adding "navbar-dark" in the class 
+      attribute of the nav tag. If you make the window smaller, "collapse navbar-collapse" would collapse
+      the navbar into a hamburger style. In this case, we commented that out because it would most likely require 
+      JavaScript to work properly. Using "container-fluid" allows the navbar to span the entire width. Using 
+      "navbar-nav me-auto mb-2 mb-lg-0" styles the navbar so that all the items are in a row. This is used in 
+      the class attribute of the ul tag. This is also used to align all the items to the left and resizes the navbar
+      properly. "nav-item" is used for adding items to the navbar. "nav-link" is used to add links to the navbar in the same 
+      style as the rest of the navbar. "active" and "disabled" can be used to specify the properties of these links. 
+      "d-flex" in the form tag organizes the elements within it (in this case, the search bar and button).
+
+      This feature of prebuilt navbars in Bootstrap is a very handy feature for every website that needs a navigation bar.
+    </p>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: navy;">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -42,9 +58,12 @@ time spent: 1 hour
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
-        </div>
+        <!-- </div> -->
       </div>
     </nav>
+    <br>
+    <h2> 2. Grids </h2>
+    <p> This feature is best used for organizing elements of a page in a specific format.</p>
     <div class="container">
         <div class="row">
           <div class="col">
@@ -55,6 +74,31 @@ time spent: 1 hour
           </div>
           <div class="col">
             Column
+          </div>
+        </div>
+      </div>
+      <br>
+      <h2> 3. Cards </h2>
+      <p> This next feature is best used for displaying information concisely as well as put a link 
+          to redirect the user elsewhere if needed. 
+      </p>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
           </div>
         </div>
       </div>
