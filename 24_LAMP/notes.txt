@@ -1,0 +1,18 @@
+Remarkable Divers | Qina Liu, Andy Lin, and Roshani Shrestha
+SoftDev pd2
+K24: Cold LAMPin w Flav
+2022-01-14t
+time spent: 1 hour
+
+Here's some helpful documentation for how to set up Ubuntu on a droplet: https://www.digitalocean.com/community/tutorials/how-to-set-up-an-ubuntu-20-04-server-on-a-digitalocean-droplet
+
+Reminder: Use SSH keys and not passwords when provisioning your droplet! It will be more secure.
+
+There is the ability to create teams on DigitalOcean, allowing multiple users to share the same droplets.
+
+Documentation for configuration steps to perform:
+https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04
+
+Documentation for adding SSH keys to an existing droplet:
+https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/to-existing-droplet/
+https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04
