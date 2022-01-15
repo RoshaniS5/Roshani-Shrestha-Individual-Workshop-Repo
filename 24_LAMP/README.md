@@ -38,6 +38,10 @@
         ```
         $ ssh root@159.65.236.192
         ```
+    - You can also ssh as your sudo user directly:
+        ```
+        $ ssh <username>@<ipv4 address>
+        ```
 5. Install Apache
 
 
