@@ -13,6 +13,8 @@ There is the ability to create teams on DigitalOcean, allowing multiple users to
 Documentation for configuration steps to perform:
 https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04
 
+Documentation for creating and adding a new sudo user: https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-20-04-quickstart
+
 Documentation for adding SSH keys to an existing droplet:
 https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/to-existing-droplet/
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04
