@@ -49,6 +49,11 @@
     1. ``` 
         # ufw app list 
         ``` 
+        You should see
+        ```
+        Available applications:
+            OpenSSH
+        ```
     2. ``` 
         # ufw allow OpenSSH 
         ```
@@ -58,6 +63,15 @@
         Then, type y and enter.
     4. ```
         # ufw status
+        ```
+        You should see: 
+        ``` 
+        Status: active  
+
+        To                         Action      From  
+        --                         ------      ----  
+        OpenSSH                    ALLOW       Anywhere  
+        OpenSSH (v6)               ALLOW       Anywhere (v6)  
         ```
 
 6. Once you ssh as root you can also run this command to add your ssh key to your sudo account:
@@ -90,11 +104,13 @@
             $ sudo ufw app list
             ```
             You should see:  
+            ```
             Available applications:  
                 Apache  
                 Apache Full  
                 Apache Secure  
                 OpenSSH  
+            ```
         4. ```
             $ sudo ufw allow in "Apache"
             ```
@@ -102,6 +118,7 @@
             $ sudo ufw status
             ```
             You should see:  
+            ```
             Status: active  
 
             To                         Action      From  
@@ -110,6 +127,7 @@
             Apache                     ALLOW       Anywhere                    
             OpenSSH (v6)               ALLOW       Anywhere (v6)                      
             Apache (v6)                ALLOW       Anywhere (v6)  
+            ```
         6. Check with http://your_server_ip and make sure the default Ubuntu 20.04 Apache web page shows up.
 
 __NOTE:__ Some people may experience ssh issues when trying to ssh into their sudo account.   
