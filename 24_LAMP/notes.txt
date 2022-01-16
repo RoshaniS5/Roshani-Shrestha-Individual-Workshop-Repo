@@ -18,3 +18,5 @@ Documentation for creating and adding a new sudo user: https://www.digitalocean.
 Documentation for adding SSH keys to an existing droplet:
 https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/to-existing-droplet/
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04
+
+Make sure to shut off root access: https://www.digitalocean.com/community/questions/how-can-i-disable-ssh-login-for-a-root-user-i-am-the-account-owner
