@@ -1,4 +1,4 @@
-# how-to :: Deploy Flask on Apache2
+# how-to :: Deploy Flask on a DigitalOcean Droplet
 ---
 ## Overview
 We will be able to deploy our Flask apps on our digital droplets.
