@@ -1,23 +1,3 @@
-/*
-   your PPTASK:
-   
-   Test drive each bit of code in this file,
-    and insert comments galore, indicating anything
-     you discover,
-    	have questions about,
-    		or otherwise deem notable.
-    		
-    		Write with your future self or teammates in mind.
-    		
-    		If you find yourself falling out of flow mode, consult 
-    		other teams
-    		MDN
-
-   A few comments have been pre-filled for you...
-   
-   (delete this block comment once you are done)
-*/
-
 // Team Splendid Slugs :: Jonathan Wu, Roshani Shrestha
 // SoftDev pd2
 // K28 -- Getting more comfortable with the dev console and the DOM
@@ -28,18 +8,20 @@
 
 //send diagnostic output to console
 //(Ctrl-Shift-K in Firefox to reveal console)
+//alternatively, just right click and then inspect.
 console.log("AYO");
 
+//assigns strings and intergers to a variable
+//notice how there isn't any declaration of what speciifc type of value it is
 var i = "hello";
 var j = 20;
 
-
 //assign an anonymous fxn to a var
+//if given a value, it will add it with variable j and print it to the console
 var f = function(x) {
   var j=30;
   return j+x;
 };
-
 
 //instantiate an object
 var o = { 'name' : 'Thluffy',
@@ -53,6 +35,7 @@ var o = { 'name' : 'Thluffy',
 
 
 //adds a new list item in real time
+//appends to the end of the list
 var addItem = function(text) {
   var list = document.getElementById("thelist");
   var newitem = document.createElement("li");
@@ -61,14 +44,15 @@ var addItem = function(text) {
 };
 
 
-//removes a list item in real time
+//removes the nth list item (starting from 0, unlike the list numbering which starts at 1) in real time 
+//unlike the addItem, this takes an integer which represents location
 var removeItem = function(n) {
   var listitems = document.getElementsByTagName('li');
   listitems[n].remove();
 };
 
-
-
+//given a list of uncolored text, this will color all the text red.
+//it is called with red()
 var red = function() {
   var items = document.getElementsByTagName("li");
   for(var i = 0; i < items.length; i++) {
@@ -76,7 +60,9 @@ var red = function() {
   }
 };
 
-
+//given a list of text that are already not in stripes (and are uncolored), this will
+//change the text color in alternating fashion by calling stripe()
+//every even list item is red and every odd list item is blue
 var stripe = function() {
   var items = document.getElementsByTagName("li");
   for(var i = 0; i < items.length; i++) {
@@ -87,8 +73,6 @@ var stripe = function() {
     }
   }
 };
-
-//insert your implementations here for...
 
 // FIB
 var fib = function(n) {
@@ -111,15 +95,6 @@ var fact = function(n) {
 };
 
 // GCD
-var gcf = function(a, b, i) {
-  if (a % i == 0, b % i == 0) {
-    return i;
-  }
-  else {
-    return gcf(a, b, i - 1);
-  }
-};
-
 var gcd = function(a, b) {
   if (a <= b) {
     return gcf(b, a, a);
@@ -128,3 +103,22 @@ var gcd = function(a, b) {
     return gcf(a, b, b);
   }
 };
+
+//gcd helper function
+var gcf = function(a, b, i) {
+  if (i == 1) {
+    return 1;
+  }
+  if (a % i == 0 && b % i == 0) {
+    return i;
+  }
+  else {
+    return gcf(a, b, (i - 1));
+  }
+};
+
+//allows one call to each of our calculator functions to appear 
+//on the page upon loading index.html
+addItem("fib(5) = " + fib(5))
+addItem("fact(5) = " + fact(5))
+addItem("gcd(15, 39) = " + gcd(15, 39))
