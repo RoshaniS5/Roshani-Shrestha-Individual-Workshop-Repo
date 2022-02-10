@@ -27,3 +27,5 @@ element.remove()
 element.innerHTML
 element.appendChild(<Element>)
 element.addEventListener(<Event>, <Function>) - same as above
+
+Justin's GCD function only worked the first time it was called but we fixed it by using var in front of each of the variables to instantiate them each time they were called.

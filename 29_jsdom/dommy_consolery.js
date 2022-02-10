@@ -109,44 +109,89 @@ var fact = function(n) {
 };
 
 // GCD
-var gcd = function(a, b) {
-  if (a <= b) {
-    return gcf(b, a, a);
-  }
-  else {
-    return gcf(a, b, b);
-  }
-};
+// var gcd = function(a, b) {
+//   if (a <= b) {
+//     return gcf(b, a, a);
+//   }
+//   else {
+//     return gcf(a, b, b);
+//   }
+// };
 
-//gcd helper function
-var gcf = function(a, b, i) {
-  if (i == 1) {
-    return 1;
+// //gcd helper function
+// var gcf = function(a, b, i) {
+//   if (i == 1) {
+//     return 1;
+//   }
+//   if (a % i == 0 && b % i == 0) {
+//     return i;
+//   }
+//   else {
+//     return gcf(a, b, (i - 1));
+//   }
+// };
+var gcd = function(a,b){
+  if (a > b) {
+    var s = b;
+  } else {
+    var s = a;
   }
-  if (a % i == 0 && b % i == 0) {
-    return i;
+  for (let i = 1; i < s; i++){
+    if (a%i == 0 && b%i == 0) {
+      var gcd = i;
+    }
   }
-  else {
-    return gcf(a, b, (i - 1));
-  }
+  return gcd;
 };
 
 //allows one call to each of our calculator functions to appear 
 //on the page upon loading index.html
-addItem("fib(5) = " + fib(5))
-addItem("fact(5) = " + fact(5))
-addItem("gcd(15, 39) = " + gcd(15, 39))
+// addItem("fib(5) = " + fib(5));
+// addItem("fact(5) = " + fact(5));
+// addItem("gcd(15, 39) = " + gcd(15, 39));
 
-//team dodo
-//create button
-var buttonFunction = function() {
+//create buttons
+var fibButton = function() {
   var bt = document.createElement("button");
-  bt.innerHTML = "hello";
+  bt.innerHTML = "fib";
   var list = document.getElementById("thelist");
-  list.appendChild(bt)
-  bt.addEventListener('click', clickButton)
+  list.appendChild(bt);
+  bt.addEventListener('click', clickFib);
 };
 
-var clickButton = function() {
-  console.log("hello")
-}
+var facButton = function() {
+  var bt = document.createElement("button");
+  bt.innerHTML = "fac";
+  var list = document.getElementById("thelist");
+  list.appendChild(bt);
+  bt.addEventListener('click', clickFac);
+};
+
+var gcdButton = function() {
+  var bt = document.createElement("button");
+  bt.innerHTML = "gcd";
+  var list = document.getElementById("thelist");
+  list.appendChild(bt);
+  bt.addEventListener('click', clickGCD);
+};
+
+var clickFib = function() {
+  var randnum = Math.floor(Math.random() * 30);
+  addItem("fib(" + randnum + ") = " + fib(randnum));
+};
+
+var clickFac = function() {
+  var randnum = Math.floor(Math.random() * 30);
+  addItem("fact(" + randnum + ") = " + fact(randnum));
+};
+
+var clickGCD = function() {
+  var randnum1 = Math.floor(Math.random() * 30) + 1;
+  var randnum2 = Math.floor(Math.random() * 30) + 1;
+  addItem("gcd(" + randnum1 + ", " + randnum2 + ") = " + gcd(randnum1, randnum2));
+};
+
+//add buttons
+fibButton();
+facButton();
+gcdButton();
