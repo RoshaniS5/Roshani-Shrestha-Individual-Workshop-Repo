@@ -28,4 +28,9 @@ element.innerHTML
 element.appendChild(<Element>)
 element.addEventListener(<Event>, <Function>) - same as above
 
-Justin's GCD function only worked the first time it was called but we fixed it by using var in front of each of the variables to instantiate them each time they were called.
+Justin's GCD function only worked the first time it was called. 
+We fixed it by using var in front of each of the variables to instantiate them each time they were called.
+
+Math Functions:
+Math.floor - returns the greatest integer less than or equal to a given number
+Math.random - returns a random floating-point number between 0 and 1
