@@ -34,3 +34,8 @@ We fixed it by using var in front of each of the variables to instantiate them e
 Math Functions:
 Math.floor - returns the greatest integer less than or equal to a given number
 Math.random - returns a random floating-point number between 0 and 1
+
+Events for addEventListener:
+click
+mouseover
+mouseout
