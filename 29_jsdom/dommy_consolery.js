@@ -173,6 +173,12 @@ var gcdButton = function() {
   var list = document.getElementById("thelist");
   list.appendChild(bt);
   bt.addEventListener('click', clickGCD);
+  bt.addEventListener('mouseover', function() {
+    bt.setAttribute('class', 'green')
+  });
+  bt.addEventListener('mouseout', function() {
+    bt.setAttribute('class', 'blue')
+  });
 };
 
 var clickFib = function() {
