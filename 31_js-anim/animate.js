@@ -36,47 +36,36 @@ var growing = true;
 //var drawDot = function() {
 var drawDot = () => {
   console.log("drawDot invoked...")
-
+  clear();
+  window.cancelAnimationFrame(requestID);
+  requestID = window.requestAnimationFrame(drawDot);
+  ctx.beginPath();
+  ctx.arc(250, 250, radius, 0, 2 * Math.PI);
+  ctx.stroke();
+  ctx.fill();
   if (growing) {
-    clear();
-    ctx.beginPath();
-    ctx.arc(250, 250, radius, 0, 2 * Math.PI);
-    ctx.stroke();
-    ctx.fill();
-    request = window.requestAnimationFrame(drawDot);
+    if (radius === 250) {
+      growing = false;
+    }
+    else {
+      radius += 1;
+    }
   }
   else {
-    window.cancelAnimationFrame(request);
+    if (radius === 0) {
+      growing = true;
+    }
+    else {
+      radius -= 1;
+    }
   }
-
-  /*
-    ...to
-    Wipe the canvas,
-    Repaint the circle,
-
-    ...and somewhere (where/when is the right time?)
-    Update requestID to propagate the animation.
-    You will need
-    window.cancelAnimationFrame()
-    window.requestAnimationFrame()
-
-   */
 };
-
 
 //var stopIt = function() {
 var stopIt = () => {
   console.log("stopIt invoked...")
   console.log( requestID );
-
-  // YOUR CODE HERE
-  /*
-    ...to
-    Stop the animation
-
-    You will need
-    window.cancelAnimationFrame()
-  */
+  window.cancelAnimationFrame(requestID);
 };
 
 
