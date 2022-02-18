@@ -1,7 +1,7 @@
-// Team Splendid Slugs :: Jonathan Wu, Roshani Shrestha
+// Team Splendid Slugs :: Sophie Liu, Roshani Shrestha
 // SoftDev pd2
-// K31 -- canvas based JS animation
-// 2022-02-15t
+// K32 -- More Moving Parts
+// 2022-02-17r
 // time spent: 45 minutes
 
 // model for HTML5 canvas-based animation
@@ -33,6 +33,8 @@ var clear = (e) => {
 
 var radius = 0;
 var growing = true;
+var growingX = true;
+var growingY = true;
 
 
 //var drawDot = function() {
@@ -59,12 +61,41 @@ var drawDot = () => {
   requestID = window.requestAnimationFrame(drawDot);
 };
 
+var dvdX = Math.floor(Math.random() * c.clientWidth);
+var dvdY = Math.floor(Math.random() * c.clientHeight);
+
 var movie = () => {
   console.log("movie");
+  clear();
+  window.cancelAnimationFrame(requestID);
   var dvdImage = new Image(100);
   dvdImage.src = 'logo_dvd.jpg';
-  // var dvdImage = document.getElementById('source');
-  void ctx.drawImage(dvdImage, 0, 0, 100, 50);
+  void ctx.drawImage(dvdImage, dvdX, dvdY, 100, 50);
+  if (dvdX === c.clientWidth - 100) {
+    growingX = false;
+  }
+  if (dvdX === 0) {
+    growingX = true;
+  }
+  if (dvdY === c.clientHeight - 50) {
+    growingY = false;
+  }
+  if (dvdY === 0) {
+    growingY = true;
+  }
+  if (growingX) {
+    dvdX++;
+  }
+  else {
+    dvdX--;
+  }
+  if (growingY) {
+    dvdY++;
+  }
+  else {
+    dvdY--;
+  }
+  requestID = window.requestAnimationFrame(movie);
 };
 
 //var stopIt = function() {
