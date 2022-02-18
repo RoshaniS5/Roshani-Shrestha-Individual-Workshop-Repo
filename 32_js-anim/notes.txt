@@ -1,22 +1,27 @@
-Team Splendid Slugs :: Jonathan Wu, Roshani Shrestha
+Team Splendid Slugs :: Sophie Liu, Roshani Shrestha
 SoftDev pd2
-K31 -- canvas based JS animation
-2022-02-15t
+K32 -- More Moving Parts
+2022-02-17r
 time spent: 45 minutes
 
 Notes
+- You must include an img tag in the html file for the image to be accessed in the JS file.
+- The horizontal and vertical movements are independent of each other.
+
 Functions:
-Image()
-    - 
+Image(width, height)
+    - Creates a new HTMLImageElement.
+    - Width and height are optional.
 
 IMAGE_OBJ.src
-    - 
+    - Uses the source of the image to create the image object.
 
-CANVAS_CONTEXT.drawImage()
-    - 
+CANVAS_CONTEXT.drawImage(image, dx, dy, dWidth, dHeight)
+    - Draws an image onto the canvas. 
+    - dWidth and dHeight are optional, but both need to be present if you're setting a size for the image.
 
-Math.random
-    - 
+Math.random()
+    - Returns a random floating-point number between 0 and 1 (inclusive of 0).
 
-Math.floor
-    -
+Math.floor(number)
+    - Returns the greatest integer less than or equal to the given number.
