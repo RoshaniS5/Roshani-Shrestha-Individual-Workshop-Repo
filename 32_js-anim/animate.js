@@ -1,4 +1,4 @@
-// Team Splendid Slugs :: Sophie Liu, Roshani Shrestha
+// Team Electric Bread :: Sophie Liu, Roshani Shrestha
 // SoftDev pd2
 // K32 -- More Moving Parts
 // 2022-02-17r
@@ -16,13 +16,12 @@ var stopButton = document.getElementById("buttonStop"); // GET STOP BUTTON
 var movieButton = document.getElementById("buttonMovie"); // GET MOVIE BUTTON
 
 //prepare to interact with canvas in 2D
-var ctx = c.getContext("2d"); 
+var ctx = c.getContext("2d");
 
 //set fill color to team color
-ctx.fillStyle = 'purple'; 
+ctx.fillStyle = 'purple';
 
 var requestID;  //init global var for use with animation frames
-
 
 //var clear = function(e) {
 var clear = (e) => {
@@ -30,12 +29,10 @@ var clear = (e) => {
   ctx.clearRect(0, 0, c.clientWidth, c.clientHeight); //clears canvas
 };
 
-
 var radius = 0;
 var growing = true;
 var growingX = true;
 var growingY = true;
-
 
 //var drawDot = function() {
 var drawDot = () => {
@@ -61,16 +58,15 @@ var drawDot = () => {
   requestID = window.requestAnimationFrame(drawDot);
 };
 
-var dvdX = Math.floor(Math.random() * c.clientWidth);
-var dvdY = Math.floor(Math.random() * c.clientHeight);
-
+var dvdX;
+var dvdY;
 var movie = () => {
   console.log("movie");
   clear();
   window.cancelAnimationFrame(requestID);
   var dvdImage = new Image(100);
   dvdImage.src = 'logo_dvd.jpg';
-  void ctx.drawImage(dvdImage, dvdX, dvdY, 100, 50);
+  ctx.drawImage(dvdImage, dvdX, dvdY, 100, 50);
   if (dvdX === c.clientWidth - 100) {
     growingX = false;
   }
@@ -105,7 +101,10 @@ var stopIt = () => {
   window.cancelAnimationFrame(requestID);
 };
 
-
 dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click",  stopIt );
-movieButton.addEventListener( "click", movie );
+movieButton.addEventListener( "click", function (event) {
+  dvdX = Math.floor(Math.random() * (c.clientWidth - 100));
+  dvdY = Math.floor(Math.random() * (c.clientHeight - 50));
+  movie();
+});
