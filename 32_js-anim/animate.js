@@ -67,23 +67,23 @@ var movie = () => {
   var dvdImage = new Image(100);
   dvdImage.src = 'logo_dvd.jpg';
   ctx.drawImage(dvdImage, dvdX, dvdY, 100, 50);
-  if (dvdX === c.clientWidth - 100) {
+  if (dvdX >= c.clientWidth - 100) {
     growingX = false;
   }
-  if (dvdX === 0) {
+  if (dvdX <= 0) {
     growingX = true;
   }
-  if (dvdY === c.clientHeight - 50) {
+  if (dvdY >= c.clientHeight - 50) {
     growingY = false;
   }
-  if (dvdY === 0) {
+  if (dvdY <= 0) {
     growingY = true;
   }
   if (growingX) {
-    dvdX++;
+    dvdX += 2;
   }
   else {
-    dvdX--;
+    dvdX -= 2;
   }
   if (growingY) {
     dvdY++;
