@@ -33,7 +33,10 @@ GrayLevel[0.5`,0.4`]],Method -> CompressedData["1:eJzlUstOwzAQbMv7wlscuPENfAAqLY
 {{Times[-2,Pi],Times[2,Pi]},{-0.9999996658276197`,0.9999993650500513`}},{{-6.283185307179586`,6.283185307179586`},{-0.9999996658276197`,0.9999993650500513`}}],PlotRangeClipping -> True,PlotRangePadding -> {{Scaled[
 0.02`],Scaled[0.02`]},{Scaled[0.02`],Scaled[0.02`]}},Ticks -> {Automatic,Automatic}}],
 StandardForm],"Output",CellLabel -> "Out[93]= ",ExpressionUUID -> "070de13f-a862-46fd-a500-bc592808e03f"]},
-Open],ExpressionUUID -> "0271e05f-1d78-4e82-8469-89b210f7744b"],Cell[
+Open],ExpressionUUID -> "0271e05f-1d78-4e82-8469-89b210f7744b"]},Open],ExpressionUUID -> "f40dec36-d829-4718-9340-7cf17aee9f37"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"Wolfram"," ","Language"}],"Section",ExpressionUUID -> "b39ebbde-128e-469a-ad9d-82550da17282"],Cell[
 CellGroupData[
 {Cell[
 BoxData[RowBox[{"var","=",RowBox[{"5","/","3"}]}]],"Input",CellLabel -> "In[94]:= ",
@@ -276,6 +279,6 @@ Association["EnvironmentName" -> "HTML","CodeSection" -> Association["Content" -
 "Title" -> Automatic,"Filename" -> "cloudembed.html"],"CloudObject" -> CloudObject[
 "https://www.wolframcloud.com/obj/6b33064b-d3c6-44e5-a691-badc33cefef2"]]]],StandardForm],
 "Output",CellLabel -> "Out[119]= ",ExpressionUUID -> "ef538910-708c-441b-91fd-edf8caaa2cef"]},
-Open],ExpressionUUID -> "90836bec-a078-4df7-96f2-b9107886b489"]},Open],ExpressionUUID -> "f40dec36-d829-4718-9340-7cf17aee9f37"]},
+Open],ExpressionUUID -> "90836bec-a078-4df7-96f2-b9107886b489"]},Open],ExpressionUUID -> "8e4c78ba-5cd5-452b-8e8d-e52acc7a9c9e"]},
 Open],ExpressionUUID -> "1988302d-72a7-4ea4-af49-a66d8cef71d8"]},StyleDefinitions -> "Default.nb",
 FrontEndVersion -> "13. for Wolfram Cloud 1.62 (April 8, 2022)",TaggingRules -> {"TryRealOnly" -> False}]
