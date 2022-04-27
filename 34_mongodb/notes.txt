@@ -4,7 +4,12 @@ K34 -- Another DB Perspective
 2022-04-26
 time spent: 0.8 hours
 
-Notes on Ms. Genkina's intro video on MongoDB (Data Modeling with MongoDB):
+Notes on Ms. Genkina's intro video on MongoDB:
+- make data easy to work with for everyone
+- more intuitive way to work with data
+- will learn about querying, computing, connecting, storing, indexing, and analyzing data using MongoDB
+
+Notes on Data Modeling with MongoDB:
 
 - Modeling in a Tabular db:
     - define the schema and then develop application and queries
