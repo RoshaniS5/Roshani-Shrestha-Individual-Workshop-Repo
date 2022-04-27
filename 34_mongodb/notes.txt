@@ -1,0 +1,46 @@
+Roshani Shrestha
+SoftDev
+K34 -- Another DB Perspective
+2022-04-26
+time spent: 0.8 hours
+
+Notes on Ms. Genkina's intro video on MongoDB (Data Modeling with MongoDB):
+
+- Modeling in a Tabular db:
+    - define the schema and then develop application and queries
+    - as data increases, performance drops
+- Data modeling with MongoDB:
+    - develop application, define data model, improve application, then improve data model
+    - improve application and improve data model works together 
+    - much better performance
+- Key Considerations of Modeling with MongoDB:
+    - data model defined at application level
+    - design part of every phase of application lifetime
+    - data that the application needs and read & write usage of data affects data model
+- Method:
+    1. Evaluate application workload 
+        - you get data size, db queries & indexes, and current operations & assumptions
+    2. Map out entities and their relationships
+    3. Finalize data model for each collection
+        - you get collections with documents fields & shapes for each as well as the previous items
+- Link vs Embed:
+    - one-to-one, one-to-many, many-to-many linked and embedded relationships
+    - one-to-one linked, one-to-many: array in parent, one-to-many: scalar in child, many-to-many: arrays on either side
+    - link or embed?:
+        - How often does the embedded info get accessed?
+        - Is the data queried using the embedded info?
+        - Does the embedded info change often?
+- Design Patterns:
+    - The Schema Versioning Pattern:
+        - different schema versions
+        - handle different schemas
+    - The Bucket Pattern:
+        - tabular approach (new document for each)
+        - document approach (new document per time unit per)
+    - The Computed Pattern
+        - doesn't spend too much energy when it's not needed
+        - precompute, don't recompute; compute on write
+        - can work with the bucket pattern
+- Considerations
+    - your data model will evolve
+    - tailor the data model to your unique setup (such as simpler vs performant data model)
