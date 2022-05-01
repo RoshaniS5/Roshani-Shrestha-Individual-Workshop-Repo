@@ -1,0 +1,66 @@
+Roshani Shrestha
+SoftDev
+K36 -- Another DB Perspective
+2022-04-30
+time spent: 1.3 hours
+
+Notes for Chapter 2 of MongoDB 101:
+
+How MongoDB stores data:
+- JSON: JavaScript Standard Object Notation 
+    - Start and end w/ curly braces 
+    = Separate each key & value w/ colon
+    - Separate each key:value pair w/ comma
+    - Keys surrounded by quotation marks
+    - Keys are called fields in MongoDB
+- BSON: Binary JSON
+    - Bridges gap between binary representation & JSON format
+    - Optimized for space, speed, & flexibility
+    - Allows for general purpose focus & high performance
+    - More in data support like dates
+
+Importing and Exporting Data:
+- mongodump --uri "<Atlas Cluster URI>"
+    - Exports data in BSON
+- mongoexport --uri "<Atlas Cluster URI>"
+              --collection=<collection name>
+              --out=<filename>.json
+    - Exports data in JSON
+- URI (Uniform Resource Identifier) string
+    - srv - establishes a secure connection
+    - mongodb+srv://user:password@clusterURI.mongodb.net/database
+- mongorestore --uri "<Atlas Cluster URI>"
+               --drop dump
+    - Imports data in BSON dump
+- mongoimport --uri "<Atlas Cluster URI>"
+              --drop=<filename>.json
+    - Imports data in JSON
+
+Data Explorer:
+- From Atlas Cluster --> Collections
+- Namespace = collection name + database name
+- There is a filter field --> need to be in valid JSON to query
+
+Find Command:
+- Connect to cluster from the shell
+- URI string
+    - Target authentication database name 
+    - mongodb+srv://user:password@clusterURI.mongodb.net/admin
+- show dbs
+    - shows all the databases
+- use <db>
+    - switches to <db>
+- show collections
+    - shows all the collections in a db
+- db.<collection>.find({<field>: <value>})
+    - finds documents that match the query in a given collection
+- it 
+    - iterates through the cursor 
+        - cursor: formerly, a pointer to a result set of a query
+            - pointer: direct address to memory location
+- db.<collection name>.find(<query>).count()
+    - returns # of documents that match the given query
+- db.<collection>.find(<query>).pretty()
+    - returns documents that match the given query formatted in a way that's easier to read
+- use find without a query
+    - returns first 20 documents of the collection (any 20 documents in the collection)
