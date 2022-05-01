@@ -1,0 +1,32 @@
+Roshani Shrestha
+SoftDev
+K35 -- Another DB Perspective
+2022-04-27
+time spent: 0.8 hours
+
+Notes for Chapter 1 of MongoDB 101:
+
+MongoDB:
+- NoSQL database
+- NoSQLdocumentDB
+- documents stored in collections
+
+Document in MongoDB:
+- way to organize and store data as set of field-value pairs
+    - <field> : <value>
+- field is a unique identifier for a datapoint, value is data related to a given identifier
+
+MongoDB Atlas:
+- can deploy clusters: group of servers to store your data
+- replica set: few connected MongoDB instances that store the same data
+- instance:  single machine locally / in the cloud, running a certain software
+- single cluster in Atlas is automatically configured as replica set
+
+Atlas User Interface Overview:
+- Collections -> Data Explorer, can also use the shell
+
+In-Browser IDE:
+- sandbox playground space
+- Launch IDE -> Browse Files, File Editor, Terminal window
+- can use Reset Workspace
+- can use Run Test
