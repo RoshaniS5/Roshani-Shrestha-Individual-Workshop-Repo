@@ -1,0 +1,82 @@
+Roshani Shrestha
+SoftDev
+K37 -- Another DB Perspective
+2022-05-03
+time spent: 1.5 hours
+
+Notes for Chapter 4 of MongoDB 101:
+
+Query Operators - Comparison:
+- query operators provide additional ways to locate data within the database
+- uses of $
+    - precedes MQL operators
+    - precedes aggregation pipeline stages
+    - allows access to field values
+- comparison operators
+    - $eq = equal to
+    - $ne = not equal to
+    - $gt > greater than 
+    - $lt < less than
+    - $gte >= greater than or equal to
+    - $lte <= less than or equal to
+    - {<field>: {<operator>: <value>}}
+
+Query Operators - Logic:
+- {<operator> : [{statement1}, {statement2},...]}
+    - $and 
+        - match all specified query clauses
+        - implicit $and: $and is used as the default operator when an operator is not specified
+        - explicit $and: when you must include the same operator more than once in a query
+    - $or 
+        - at least 1 query clause is matched 
+    - $nor
+        - fail to match both given clauses
+- {<operator>: {statement}}
+    - $not
+        - negates the query requirement
+
+Expressive Query Operator:
+- $expr 
+    - allows the use of aggregation expressions with the query language
+    - {$expr: {<expression>}}
+    - allows the use of variables and conditional statements
+- $
+    - denotes use of operator
+    - addresses the field value
+- Aggregation syntax
+    - {<operator>: {<field>, <value>}}
+
+Array Operators:
+- $push
+    - adds element to an array
+    - if the field is absent from the document, it adds the array field with the value as its element
+- $size
+    - {<array field>: {"$size": <number>}}
+    - returns a cursor with all documents where the specified array field is exactly the given length
+- $all
+    - {<array field>: {"$all": <array>}}
+    - returns a cursor with all documents in which the specified array field contains all the given elements regardless of their order in the array
+- querying an array field using
+    - an array: returns only exact array matches
+    - a single element: returns all documents where the specified array field contains the given element
+
+Array Operators and Projection:
+- a projection specifies the fields that should be included in the cursor result
+- projection syntax
+    - db.<collection>.find({<query>}, {<projection>})
+    - 1: include the field
+    - 0: exclude the field
+    - use only 1s or only 0s
+    - example: {<field>: 0} for the projection
+    - exception: can mix 0s and 1s only if you are asking to exclude the _id field
+- $elemMatch
+    - {<field>: {"$elemMatch": {<field>: <value>}}}
+    - matches documents that contain an array field with at least 1 element that matches the specified query criteria
+    - projects only the array elements with at least 1 element that matches the criteria
+
+Array Operators and Sub-Documents:
+- MQL uses dot-notation
+    - db.collection.find({"field 1.other field.also a field": "value"})
+    - used for positions of array elements as well
+- $regex
+    - used to see whether a field contains a string
