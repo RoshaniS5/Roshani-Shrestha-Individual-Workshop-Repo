@@ -1,0 +1,60 @@
+Roshani Shrestha
+SoftDev
+K39 -- Another DB Perspective
+2022-05-09
+time spent: 1.5 hours
+
+Notes for Chapter 5 of MongoDB 101:
+
+Aggregation Framework:
+- another way to query data in MongoDB
+- db.<collection>.aggregate([{$match: {}}, {$project: {}}])
+- $group
+    - operator that takes incoming stream of data, then siphons it into multiple distinct reservoirs
+    -  {$group: {
+        _id: "", // Group By Expression
+        <field1>: {<accumulator1> : <expression1>},
+        ...}}
+- $sum
+
+sort() and limit():
+- cursor methods
+- db.<collection>.find().sort({<field1>: 1, <field2>: -1})
+    - orders data based on specifications
+    - 1 is increasing, -1 is decreasing
+- .limit() specifies the amount of results 
+- cursor.limit().sort() means cursor.sort().limit()
+
+Introduction to Indexes:
+- index in a database
+    - special data structure that stores a tiny portion of the collection's data set in a form that is easy to traverse
+    - single field and compound
+- db.<collection>.createIndex({<field>: <number>})
+- compound index
+    - used for multiple queries
+
+Introduction to Data Modeling:
+- data modeling
+    - way to organize fields in a document to support your querying capabilities and application performance
+    - rule: data is stored in the way that it's used
+    - main considerations
+        - what we'll store
+        - how it will be queried
+    - data that is used together should be stored together
+    - evolving application --> evolving data model
+
+Upsert - Update or Insert?
+- db.collection.updateOne({<query to locate>}, {<update>})
+- upsert: hybrid of insert and update - should only be used when needed
+    - db.collection.updateOne({<query>}, {<update>}, {"upsert":true})
+    - if upsert is true:
+        - update document when there is a match
+        - insert document when there isn't a match
+    - upsert:true
+        - be mindful about this decision
+        - conditional updates
+        - good for upsert if both answers are yes:
+            - is {<update>} enough to create a new document?
+            - will the document have similar/same form to other documents in the collection? 
+    - upsert:false
+        - just update existing document or insert new document

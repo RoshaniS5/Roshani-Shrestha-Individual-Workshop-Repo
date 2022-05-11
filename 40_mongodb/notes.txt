@@ -1,0 +1,40 @@
+Roshani Shrestha
+SoftDev
+40 -- Another DB Perspective
+2022-05-10
+time spent: 0.8 hours
+
+Notes for Chapter 5 of MongoDB 101:
+
+Atlas Features - More Data Explorer:
+- Indexes tab
+    - performance advisor for your database
+- Schema Anti-Patterns tab
+    - advice about data model
+- Aggregation tab
+    - build aggregation pipelines in the UI
+    - see how data is transformed from stage to stage
+    - can export the pipeline to a language
+-  Atlas Search
+    - advanced search functionality
+
+Atlas Products and Options:
+- Atlas
+    - users can be grouped into teams, different access for each team
+- Realm
+    - services for developers to build mobile or web applications
+    - integrate MongoDB Atlas data into an application
+- Charts
+    - dynamic data visualizations
+
+MongoDB Compass:
+- can copy connection string from Atlas cluster for Compass
+- information about each database
+- DON'T TOUCH admin, config, and local UNLESS EXPLICITLY DIRECTED BY SUPPORT!
+- ability to filter data in the Documents tab 
+- Schema tab takes a sample of 1000 documents and analyzes the schema - overview of shape of documents
+- all documents are indexed by _id value --> will always have at least 1 index in the Indexes tab
+- Explain Plan tab 
+    - explains how data that you're looking for was found & retrieved from the database
+    - helps understand & improve performance of your queries
+- Validation tab helps you determine what is/isn't allowed to be written to your database
