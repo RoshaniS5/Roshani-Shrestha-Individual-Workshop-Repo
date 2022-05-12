@@ -4,7 +4,7 @@ K40 -- Another DB Perspective
 2022-05-10
 time spent: 0.8 hours
 
-Notes for Chapter 5 of MongoDB 101:
+Notes for Chapter 6 of MongoDB 101:
 
 Atlas Features - More Data Explorer:
 - Indexes tab
